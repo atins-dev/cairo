@@ -130,7 +130,6 @@ png_dep = dependency('libpng',
   fallback: ['libpng', 'png_dep']
 )
 if png_dep.found()
-  feature_conf.set('CAIRO_HAS_SVG_SURFACE', 1)
   feature_conf.set('CAIRO_HAS_PNG_FUNCTIONS', 1)
   built_features += [
     {
@@ -138,11 +137,6 @@ if png_dep.found()
       'description': 'PNG functions',
       'requires': 'libpng',
     },
-    {
-      'name': 'cairo-svg',
-      'description': 'SVG surface backend',
-      'requires': 'libpng',
-    }
   ]
 
   if png_dep.type_name() == 'internal'
