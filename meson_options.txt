@@ -20,7 +20,7 @@ option('xlib', type : 'feature', value : 'auto')
 option('zlib', type : 'feature', value : 'auto') # script, ps, pdf, xml surfaces
 
 # Tests
-option('tests', type : 'feature', value : 'auto')
+option('tests', type : 'feature', value : 'disabled')
 
 # Util deps
 option('gtk2-utils', type : 'feature', value : 'disabled')
